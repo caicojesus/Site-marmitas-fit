@@ -1,0 +1,51 @@
+/* Container geral (flutuante e arrastável) */
+#acessibilidade-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    cursor: move;
+    /* Cursor de arrastar */
+}
+
+/* Botão principal */
+#acessibilidade-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background: #0400ff;
+    color: #333;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: .2s;
+}
+
+/* Menu escondido */
+#acessibilidade-menu {
+    display: none;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+}
+
+/* Botões internos */
+#acessibilidade-menu button {
+    display: block;
+    width: 50px;
+    margin: 5px auto;
+    padding: 5px 0;
+    border: none;
+    background: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+#acessibilidade-menu button:hover {
+    background: #e0e0e0;
+}
