@@ -132,7 +132,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // Função para trocar o banner somente no index
   function atualizarBanner(escuro) {
     if (!banner) return; // só executa se existir banner
+<<<<<<< Updated upstream
     banner.src = escuro ? `${prefix}imagens/14 (1).jpeg` : `${prefix}imagens/13.jpeg`;
+=======
+    banner.src = escuro ? `${prefix}imagens/Rd6.jpg` : `${prefix}imagens/RD5.jpg`;
+>>>>>>> Stashed changes
   }
 
   // Ativar modo salvo

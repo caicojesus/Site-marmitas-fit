@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* Reset e base */
 
 
@@ -3139,3 +3140,1279 @@ body.dark-mode .sidebar-filtros {
 }
 
 
+=======
+/* Reset e base */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    /* Define o tamanho base da fonte. 16px é o padrão do navegador. */
+    font-size: 16px;
+
+    /* Opcional: Adiciona uma transição suave para a mudança de tamanho */
+    transition: font-size 0.2s ease;
+}
+
+/* Opcional: Estiliza e posiciona os botões de acessibilidade */
+#acessibilidade-texto {
+    position: fixed;
+    /* Mantém o bloco fixo na tela */
+    top: 10px;
+    right: 10px;
+    z-index: 9999;
+}
+
+#acessibilidade-texto button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Cabeçalho */
+
+.Barra-meio {
+    /* A MÁGICA PRINCIPAL: 
+       Coloca o input e o botão lado a lado e na mesma altura. */
+    display: flex;
+    align-items: center;
+    /* Alinha verticalmente (caso tenham alturas diferentes) */
+    /* Apenas para estilo: */
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    /* Bordas bem arredondadas, estilo moderno */
+    overflow: hidden;
+    /* Esconde as "quinas" do input e do botão */
+    /* Defina uma largura ou deixe o flexbox do menu principal cuidar disso */
+    width: 300px;
+    background-color: #f0f0f0;
+}
+
+.campo-pesquisa {
+    /* A SEGUNDA MÁGICA:
+       Faz o campo de texto crescer e ocupar todo o espaço
+       disponível, empurrando o botão para o canto. */
+    flex: 1;
+    /* Remove todas as bordas e fundos feios */
+    border: none;
+    outline: none;
+    /* Tira a borda azul ao clicar */
+    background-color: transparent;
+    /* Fundo transparente */
+    /* Espaçamento interno (altura e distância do texto) */
+    padding: 10px 15px;
+    /* Estilo do texto */
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.botao-pesquisa {
+    /* Remove todas as bordas e fundos feios */
+    border: none;
+    outline: none;
+    background-color: transparent;
+    /* Fundo transparente */
+    /* Espaçamento para o ícone */
+    padding: 0 12px;
+    cursor: pointer;
+    /* Mãozinha ao passar o rato */
+    font-size: 1.2rem;
+    /* Tamanho do ícone (emoji) */
+    color: #555;
+    transition: color 0.2s ease;
+}
+
+.botao-pesquisa:hover {
+    color: #000;
+    /* Escurece o ícone ao passar o rato */
+}
+
+/* ============================================= */
+/* 1. CABEÇALHO PRINCIPAL (A BARRA ROXA) */
+/* ============================================= */
+#top-nav {
+    display: flex;
+    /* A MÁGICA: alinha os blocos filhos lado a lado */
+    align-items: center;
+    /* Alinha tudo no centro verticalmente */
+    justify-content: space-between;
+    /* Espaço entre os blocos */
+    flex-wrap: wrap;
+    /* Permite quebrar a linha em telas pequenas */
+    gap: 20px;
+    /* Espaço entre os elementos se quebrarem a linha */
+
+    background-color: #ce2027;
+    /* Cor roxa do seu CSS */
+    padding: 15px 20px;
+    /* Espaçamento do seu CSS */
+    color: #ffffff;
+    /* Cor do texto (branco) */
+}
+
+/* ============================================= */
+/* 2. LOGO (Esquerda) */
+/* ============================================= */
+#AldeiaGeek a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Espaço entre a imagem e o texto */
+
+    color: #ffffff;
+    /* Cor do seu CSS */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#AldeiaGeek img {
+    height: 50px;
+    /* Altura da logo (ajuste se precisar) */
+    width: auto;
+}
+
+
+/* Botões do cabeçalho */
+
+#nav-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#nav-right button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+#nav-right button:hover {
+    background-color: #ffffff;
+    color: #FFFFFF;
+}
+
+
+/* Barra de pesquisa */
+
+#search-container {
+    margin-top: 10px;
+    display: none;
+    /* inicialmente escondido, togglado via JS */
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#search-bar {
+    flex: 1;
+    max-width: 400px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+#search-button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0a0a0a;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.3s;
+    min-width: 100px;
+}
+
+#search-button:hover {
+    background-color: #009100;
+    color: #FFFFFF;
+}
+
+
+/* Links do main */
+
+main h1 a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0 5px;
+    transition: color 0.3s;
+}
+
+main h1 a:hover {
+    color: #ffffff;
+}
+
+
+/* Container holográfico */
+
+/* ============================================= */
+/* 3. NAVEGAÇÃO HOLOGRÁFICA (Centro) */
+/* ============================================= */
+.holographic-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Espaço entre os botões */
+    background: none;
+    /* Remove o fundo roxo duplicado */
+}
+
+.holographic-card {
+    background: linear-gradient(45deg, #00ffe0, #ff00ff, #00ff88);
+    background-size: 300% 300%;
+    animation: holographic 6s ease infinite;
+    padding: 10px 25px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.holographic-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.holographic-card a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+}
+
+/* Animação */
+@keyframes holographic {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.holographic-card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+
+/* Produtos */
+
+.titulo-produtos {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background-color: #fafafa;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.quatro-img {
+    display: flex;
+    /* ativa o flexbox */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-items: center;
+    /* centraliza verticalmente */
+    gap: 20px;
+    /* espaço entre as imagens */
+    height: 100vh;
+    /* ocupa toda a altura da tela */
+    background-color: #f5f5f5;
+    /* opcional, só pra visualizar */
+}
+
+.quatro-img {
+    display: grid;
+    /* ativa o grid */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas */
+    grid-template-rows: repeat(2, auto);
+    /* 2 linhas */
+    gap: 30px;
+    /* espaçamento entre as imagens */
+    justify-content: center;
+    /* centraliza horizontalmente */
+    align-content: center;
+    /* centraliza verticalmente */
+    height: 100vh;
+    /* ocupa toda a tela */
+    background-color: #f5f5f5;
+    /* opcional, só pra visualizar */
+}
+
+.quatro-img {
+    display: grid;
+    grid-template-columns: repeat(2, 635px);
+    /* duas colunas fixas */
+    grid-template-rows: repeat(2, 275px);
+    /* duas linhas fixas */
+    justify-content: center;
+    /* centraliza o conjunto no meio da tela */
+    align-content: center;
+    height: 100vh;
+    /* ocupa toda a altura da tela */
+    gap: 1px;
+    /* sem espaço entre as imagens */
+    margin: 0;
+}
+
+.quatro-img button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.quatro-img img {
+    width: 635px;
+    height: 275px;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* POPUP */
+
+#popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(146, 105, 105, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popup-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+#popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #000000;
+}
+
+#popup-box button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #cfbeec;
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#popup-box button:hover {
+    background-color: #3c8133;
+    color: #000000;
+}
+
+
+/* Formulário de login */
+
+#login-form {
+    display: none;
+    margin-top: 15px;
+    text-align: left;
+}
+
+#login-form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+#login-form button:hover {
+    background-color: #32CD32;
+}
+
+
+/* Dropdown logout */
+
+#logout-menu {
+    display: none;
+    position: absolute;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    top: 60px;
+    width: 120px;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rg#000000ee ba(218, 193, 193, 0.2);
+    z-index: 100;
+}
+
+#logout-menu li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+}
+
+#logout-menu li:hover {
+    background-color: #f5f5f5;
+}
+
+
+/* Esconde o botão hambúrguer no desktop */
+#menu-hamburger {
+    display: none; 
+}
+
+
+/* Responsivo */
+
+/* ============================================= */
+/* 📱 REGRAS DE RESPONSIVIDADE (CELULAR) */
+/* ============================================= */
+@media (max-width: 768px) {
+
+    /* 1. Ajusta o cabeçalho para o logo e o hambúrguer */
+    #top-nav {
+        flex-direction: row;
+        /* Linha: Logo de um lado, botão do outro */
+        flex-wrap: wrap;
+        /* Permite que o resto quebre a linha */
+        justify-content: space-between;
+        /* Logo na esquerda, botão na direita */
+        align-items: center;
+        gap: 15px;
+        /* Espaço caso os itens quebrem a linha */
+        padding: 15px;
+    }
+
+    /* 2. MOSTRA O BOTÃO HAMBÚRGUER */
+    #menu-hamburger {
+        display: block;
+        /* Mostra o botão no celular */
+        font-size: 2.2rem;
+        /* Tamanho do ícone */
+        color: white;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        order: 2;
+        /* Ordem: Fica depois da logo */
+    }
+
+    /* 3. ESCONDE O MENU HOLOGRÁFICO (POR PADRÃO) */
+    .holographic-container {
+        display: none;
+        /* ESCONDIDO por padrão no celular */
+
+        flex-direction: column;
+        /* Empilha os links verticalmente */
+        width: 100%;
+        /* Ocupa a largura toda */
+        order: 4;
+        /* Ordem: Fica por último no cabeçalho */
+        gap: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
+        /* Linha separadora */
+    }
+
+    /* 4. MOSTRA O MENU QUANDO CLICADO (A MÁGICA DO JS) */
+    .holographic-container.menu-visivel {
+        display: flex;
+        /* REVELA o menu quando a classe .menu-visivel é adicionada */
+    }
+
+    .holographic-container .holographic-card {
+        width: 100%;
+        /* Faz cada link ocupar a largura toda */
+        text-align: center;
+    }
+
+    /* 5. Faz a barra de pesquisa ocupar 100% da largura */
+    .Barra-meio {
+        width: 100%;
+        /* Ocupa 100% da linha */
+        order: 3;
+        /* Ordem: Fica abaixo da logo/hambúrguer */
+    }
+
+    /* 6. Empilha os botões (Login/Dark Mode) */
+    #nav-right {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+        order: 3;
+        /* Ordem: Fica junto com a barra de pesquisa */
+        gap: 10px;
+    }
+
+    #nav-right button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 7. Ajusta o grid de 4 imagens */
+    .quatro-img {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        height: auto;
+        gap: 10px;
+    }
+
+    .quatro-img img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* 8. Ajusta o grid de produtos */
+    .container {
+        flex-direction: column;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+
+
+
+.product-card {
+    background-color: #030002;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(214, 109, 10, 0.6);
+}
+
+.product-card:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #32CD32;
+}
+
+.product-card p,
+.product-card figcaption {
+    margin: 10px 0 5px;
+    pointer-events: none;
+    /* para não interferir no clique do botão */
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 5px;
+    pointer-events: none;
+}
+
+#vaiterroupasaqui {
+    text-align: center;
+}
+
+
+/*pagina VESTUARIO */
+
+.menu-principal {
+    background-color: #333;
+    /* Cor de fundo do menu */
+    overflow: hidden;
+    /* Garante que nada "vaze" */
+}
+
+.menu-principal ul {
+    list-style: none;
+    /* Remove as bolinhas */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Coloca os itens do menu lado a lado */
+    justify-content: center;
+}
+
+.menu-principal li a {
+    display: block;
+    /* Faz o link ocupar todo o espaço do <li> */
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    /* Espaçamento interno (altura e largura) */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Efeito :hover nos links normais */
+
+.menu-principal li a:hover {
+    background-color: #555;
+}
+
+
+/* --- 2. A LÓGICA DO DROPDOWN (O MAIS IMPORTANTE) --- */
+
+
+/* O "pai" do dropdown (.dropdown) precisa ter position: relative.
+   Isso diz ao submenu (que terá position: absolute) para
+   se posicionar *relativo a este <li>*, e não à página inteira.
+*/
+
+.dropdown {
+    position: relative;
+}
+
+
+/* O conteúdo do submenu (a lista <ul> escondida) */
+
+.dropdown-content {
+    /* 1. ESCONDA O SUBMENU POR PREDEFINIÇÃO */
+    display: none;
+    /* 2. POSICIONE-O CORRETAMENTE */
+    position: absolute;
+    /* Faz o submenu "flutuar" abaixo do "pai" */
+    top: 100%;
+    /* Começa exatamente abaixo do "pai" */
+    left: 0;
+    /* Alinhado à esquerda do "pai" */
+    /* 3. ESTILIZE O SUBMENU */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    /* Largura mínima do dropdown */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    /* Garante que o submenu fique *sobre* o conteúdo da página */
+    /* O submenu escondido também é flex, mas em coluna */
+    display: none;
+    /* COMEÇA ESCONDIDO! */
+    flex-direction: column;
+}
+
+
+/* Os links *dentro* do submenu */
+
+.dropdown-content a {
+    color: black;
+    /* Cor do texto diferente do menu principal */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+/* Efeito :hover nos links do submenu */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* --- 3. A REVELAÇÃO (O "TRUQUE" CSS) --- */
+
+
+/* Esta é a regra principal:
+  Quando o utilizador passa o rato (`:hover`) no "pai" (`.dropdown`),
+  o CSS procura pelo filho (`.dropdown-content`) e muda o `display` dele!
+*/
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    /* MUDA DE 'none' PARA 'flex' (ou 'block') */
+}
+
+
+/* --- 1. O POSICIONAMENTO (O MAIS IMPORTANTE) --- */
+
+
+/* Este é o "Pai" que segura as duas colunas */
+
+.container-pagina {
+    display: flex;
+    /* MÁGICA: Coloca os filhos (aside e main) lado a lado */
+    max-width: 1200px;
+    margin: 20px auto;
+    /* Centraliza na tela */
+    gap: 0px;
+    /* Cria um espaço entre a sidebar e os produtos */
+}
+
+
+/* O "Filho 1" (Sidebar) */
+
+.sidebar-filtros {
+    /* Define uma largura fixa para a barra */
+    width: 250px;
+    /* flex-basis é uma forma mais moderna de definir a largura em um flexbox */
+    /* flex-basis: 250px; */
+    /* Impede que a barra encolha se a tela ficar pequena */
+    flex-shrink: 0;
+}
+
+
+/* O "Filho 2" (Produtos) */
+
+.area-produtos {
+    /* Diz para a área de produtos ocupar TODO o resto do espaço disponível */
+    flex: 1;
+    display: flexbox;
+    padding-left: 3%;
+    margin: auto;
+}
+
+
+/* --- 2. O ESTILO (A APARÊNCIA) --- */
+
+
+/* Estilizando a caixa da sidebar */
+
+.sidebar-filtros {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Título principal "Filtros" */
+
+.sidebar-filtros h2 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+
+/* Subtítulos ("Tamanho", "Cor") */
+
+.bloco-filtro h3 {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* A lista de opções */
+
+.bloco-filtro ul {
+    list-style: none;
+    /* Remove as bolinhas da lista */
+    padding: 0;
+    /* Remove o preenchimento padrão */
+    margin: 0;
+}
+
+
+/* Cada item da lista (<li>) */
+
+.bloco-filtro li {
+    margin-bottom: 8px;
+    /* Espaçamento entre as opções */
+    display: flex;
+    /* Alinha a caixinha com o texto */
+    align-items: center;
+}
+
+
+/* O texto (label) do filtro */
+
+.bloco-filtro label {
+    margin-left: 8px;
+    /* Espaço entre a caixinha e o texto */
+    cursor: pointer;
+    /* Muda o mouse para "mãozinha" */
+}
+
+.paginacao {
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    padding: 5%;
+    text-align: center;
+    font-size: 250%;
+}
+
+.paginacao :hover {
+    color: red;
+    text-decoration: underline;
+    /
+}
+
+.Assinar {
+    font-size: 500%;
+    background-color: #7C3AED;
+    text-align: center;
+    padding: 6%;
+}
+
+.click-aqui {
+    font-size: 20%;
+    padding: 2%;
+}
+
+.barra-rodape {
+    width: 75%;
+    height: 25%;
+    padding: 2%;
+}
+
+.rodape-titulo {
+    padding: 1%;
+}
+
+.imginstagram {
+    width: 50px;
+    height: auto;
+    max-width: 100%
+}
+
+.formas-pagamento {
+    font-size: 80%;
+    text-align: center;
+}
+
+.texto-final {
+    text-align: center;
+}
+
+.consideração-final {
+    text-align: center;
+}
+
+
+/* ======== BASE ======== attt se ligar aqui */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #000;
+}
+
+.container {
+    color: #000000;
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+aside {
+    flex: 1 1 220px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    min-width: 220px;
+    height: fit-content;
+}
+
+aside h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+aside h3 {
+    font-size: 1rem;
+    margin: 15px 0 8px;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+
+/* ======== PRODUTOS ======== */
+
+.produtos {
+    flex: 3 1 700px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.produto {
+    background: #EC4899;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+
+.produto h4 {
+    margin-bottom: 5px;
+}
+
+.produto p {
+    font-weight: bold;
+}
+
+
+/* ======== RODAPÉ ======== */
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #f7f7f7;
+    margin-top: 40px;
+}
+
+footer h4 {
+    margin-bottom: 15px;
+}
+
+footer .redes img {
+    width: 40px;
+    margin: 5px;
+}
+
+/* Tema padrão (claro) */
+body {
+    background-color: #ffffff;
+    color: #000000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Elementos importantes */
+header,
+footer {
+    background-color: #f5f5f5;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #111;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ===== CABEÇALHO ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7C3AED;
+    color: white;
+    padding: 15px 25px;
+}
+
+header .logo {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+.produto-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.galeria {
+    flex: 1 1 400px;
+    text-align: center;
+}
+
+#img-principal {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.miniaturas img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.miniaturas img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== DETALHES DO PRODUTO ===== */
+.detalhes {
+    flex: 1 1 400px;
+}
+
+.detalhes h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 1.8rem;
+    color: #7C3AED;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.descricao {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 250px;
+}
+
+.acoes select {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #aaa;
+}
+
+.btn-comprar {
+    background-color: #7C3AED;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-comprar:hover {
+    background-color: #5a25d9;
+    transform: scale(1.03);
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    background: #f5f5f5;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #333;
+}
+
+
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    background-color: #26114a;
+    color: #eaeaea;
+}
+
+body.dark-mode header {
+    background-color: #26114a;
+}
+
+body.dark-mode footer {
+    background-color: #26114a;
+    color: #ccc;
+}
+
+body.dark-mode #darkModeBtn {
+    border-color: #ccc;
+    color: #ccc;
+}
+
+body.dark-mode .preco {
+    color: #ededed;
+}
+
+body.dark-mode #top-nav {
+    background-color: #26114a
+}
+
+#darkModeBtn:hover {
+    background-color: #ddd;
+}
+
+/* ===== DARK MODE 2  ===== */
+body.dark-mode .quatro-img {
+    background-color: #26114a;
+    /* fundo escuro */
+}
+
+body.dark-mode .holographic-card a {
+    color: #000000;
+}
+
+body.dark-mode #darkModeBtn:hover {
+    background-color: #333;
+}
+
+/* BOTÃO DARK MODE */
+#darkModeBtn {
+    background-color: transparent;
+    border: 2px solid #666;
+    color: #333;
+    border-radius: 10px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* BOTÃO DARK MODE */
+#darkModeBtn {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+#darkModeBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .Assinar {
+    background-color: #26114a
+}
+
+body.dark-mode .sidebar-filtros {
+    background-color: #8e2424;
+    padding: 20px;
+    border: 1px solid #f41212;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.popup-carrinho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+>>>>>>> Stashed changes
