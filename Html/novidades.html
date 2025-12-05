@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -175,4 +176,183 @@
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aldeia Geek - Produtos</title>
+    <link rel="stylesheet" href="../CSS/indexCss.css">
+    <link rel="stylesheet" href="../CSS/acessibilidade.css" />
+</head>
+
+<!-- ======== TOPO MENU COMEÇA AQUI ======== -->
+
+<body>
+
+    <!-- Botão Flutuante de Acessibilidade -->
+    <div id="acessibilidade-widget">
+        <button id="acessibilidade-btn">A</button>
+
+        <div id="acessibilidade-menu">
+            <button id="btnAumentar">A+</button>
+            <button id="btnDiminuir">A-</button>
+            <button id="btnResetar">Resetar</button>
+        </div>
+    </div>
+
+
+    <header id="top-nav">
+        <div id="AldeiaGeek">
+            <a href="../index.html">
+                <img src="../imagens/logo site.png" alt="Logo Aldeia Geek">
+                <span>AldeiaGeek</span>
+            </a>
+        </div>
+
+        <nav class="holographic-container">
+            <div class="holographic-card"><a href="../html/novidades.html">Novidades</a></div>
+            <div class="holographic-card"><a href="../html/vestuario.html">Vestuário</a></div>
+            <div class="holographic-card"><a href="../html/colecionaveis.html">Colecionáveis</a></div>
+            <div class="holographic-card"><a href="../html/Acessorios.html">Acessórios</a></div>
+        </nav>
+
+        <form class="Barra-meio">
+            <input type="search" class="campo-pesquisa" placeholder="Pesquisar na Aldeia">
+            <button type="submit" class="botao-pesquisa">🔍</button>
+        </form>
+
+        <div id="nav-right">
+            <button id="darkModeBtn">◑</button>
+
+
+
+            <button id="login-btn">Login ou Registrar-se</button>
+            <ul id="logout-menu">
+                <li id="logout-option">Sair</li>
+            </ul>
+        </div>
+
+    </header>
+
+    <script src="../JS/indexJs.js"></script>
+    <script src="../JS/login.js"></script>
+    <script src="../JS/acessibilidadefonte.js"></script>
+
+    <div id="popup-overlay">
+        <div id="popup-box">
+            <span id="popup-close">X</span>
+            <h3>Bem-vindo!</h3>
+            <button onclick="mostrarLogin()">Login</button>
+            <button onclick="registrar()">Registrar-se</button>
+
+            <div id="login-form">
+                <h4>Entrar</h4>
+                <form id="formLogin">
+                    <label for="usuario">Login:</label>
+                    <input type="text" id="usuario" name="usuario" required>
+
+                    <label for="senhaLogin">Senha:</label>
+                    <input type="password" id="senhaLogin" name="senhaLogin" required>
+
+                    <div id="erroLogin"></div>
+
+                    <button type="submit">Entrar</button>
+                    <button type="reset">Limpar</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======== CONTEÚDO PRINCIPAL ======== -->
+    <div class="container">
+        <aside>
+            <h2>Filtros</h2>
+            <div class="bloco-filtro">
+                <h3>Tamanho</h3>
+                <ul>
+                    <li><input type="checkbox"> P</li>
+                    <li><input type="checkbox"> M</li>
+                    <li><input type="checkbox"> G</li>
+                    <li><input type="checkbox"> GG</li>
+                </ul>
+            </div>
+            <div class="bloco-filtro">
+                <h3>Categoria</h3>
+                <ul>
+                    <li><input type="checkbox"> Camisetas</li>
+                    <li><input type="checkbox"> Canecas</li>
+                    <li><input type="checkbox"> Almofadas</li>
+                    <li><input type="checkbox"> Eco Bags</li>
+                </ul>
+            </div>
+        </aside>
+
+        <section class="produtos">
+            <div class="produto">
+                <a href="Box Demon.html">
+                    <img src="../imagens/boxdemon1.png" alt="Box Demon Slayers"></a>
+                <h4>Box Demon Slayers</h4>
+                <p>R$ 999,90</p>
+            </div>
+            <div class="produto">
+                <a href="Box Gantz.html">
+                    <img src="../imagens/box gantz1.png" alt="Box Gantz"> </a>
+                <h4>Box Gantz - Parte Um </h4>
+                <p>R$ 599,90</p>
+            </div>
+            <div class="produto">
+                <a href="box tokio.html">
+                    <img src="../imagens/boxtokyo1.png" alt="Box Tokyo Ghoul Vols"></a>
+                <h4>Box Tokyo Ghoul Vols. 1 ao 14</h4>
+                <p>R$ 474,60</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- ======== RODAPÉ ======== -->
+    <section class="Assinar ">
+        <h4> Assinar Novidades </h4>
+        <input class="barra-rodape" type="text" placeholder="Digite seu Email">
+        <button class="click-aqui"> ASSINAR </button>
+    </section>
+
+    <h1 class="rodape-titulo">Aldeia Geek</h1>
+
+
+    <a href="https://www.facebook.com/"> <img src="../imagens/RD1 png facebook.png" class="imginstagram"></a>
+    <a href="https://www.instagram.com/"><img src="../imagens/RD2 insta.png" class="imginstagram"></a>
+    <a href="https://x.com/"><img src="../imagens/RD3 twitter.png" class="imginstagram"></a>
+    <a href="https://web.whatsapp.com/"><img src="../imagens/RD4 whatsapp.png" class="imginstagram"></a>
+    <hr>
+
+    <p class="formas-pagamento"> FORMAS DE PAGAMENTO <br>
+        <img src="../imagens/img19.png">
+        <img src="../imagens/img20.png">
+        <img src="../imagens/img21.png">
+        <img src="../imagens/img22.png">
+    </p>
+
+
+    <footer>
+        <br>
+        <p class="texto-final">© 2025 AldeiaGeek • Todos os direitos reservados • <a href="#">Email:
+                exemplo@projeto.com</a> <br>
+
+
+            <!--texto final -->
+
+
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+    </footer>
+
+
+
+</body>
+
+>>>>>>> Stashed changes
 </html>
