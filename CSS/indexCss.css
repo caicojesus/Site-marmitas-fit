@@ -209,7 +209,7 @@ body {
 }
 
 #search-button:hover {
-    background-color: #009100;
+    background-color: #00ff00;
     color: #FFFFFF;
 }
 
@@ -1522,6 +1522,9 @@ body {
 /* ============================================= */
 /* 1. CABEÇALHO PRINCIPAL (A BARRA ROXA) */
 /* ============================================= */
+
+
+
 #top-nav {
     display: flex;
     /* A MÁGICA: alinha os blocos filhos lado a lado */
@@ -3262,6 +3265,8 @@ body {
 
 /* ===== CABEÇALHO ===== */
 header {
+    background-image: var(--bs-gradient);
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
